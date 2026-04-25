@@ -1,0 +1,9 @@
+import sys
+
+def solve():
+    data = sys.stdin.read().strip()
+    if data:
+        print(round(float(data)))
+
+if __name__ == "__main__":
+    solve()
