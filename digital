@@ -1,0 +1,12 @@
+import sys
+
+def main():
+    input_data = sys.stdin.read().split()
+    if not input_data:
+        return
+    m = int(input_data[0])
+    days_in_months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    print(days_in_months[m-1])
+
+if __name__ == "__main__":
+    main()
