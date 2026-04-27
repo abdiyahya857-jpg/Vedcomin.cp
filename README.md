@@ -1,4 +1,4 @@
-👋 Hi, I'm Abdi Yahya Bashir
+👋 Hi, I'm "Abdi Yahya Bashir" (https://github.com/abdiyahya857-jpg)
 
 💻 C++ Developer
 🔧 Electronics & Communication Engineering Student
@@ -10,7 +10,7 @@
 
 I am Abdi Yahya Bashir, a C++ developer focused on building efficient, scalable solutions through strong problem-solving and system-level thinking.
 
-With a background in electronics maintenance and diagnostic testing, I approach software development with a deep understanding of how systems behave both in hardware and software environments.
+With a background in electronics maintenance and diagnostic testing, I understand how systems behave at both hardware and software levels, which strengthens my approach to software development.
 
 ---
 
@@ -36,55 +36,55 @@ With a background in electronics maintenance and diagnostic testing, I approach 
 ⚙️ Engineering Approach
 
 - 🔍 Analyze system behavior
-- 🧩 Break problems into manageable components
-- 🛠️ Develop efficient and maintainable solutions
+- 🧩 Break problems into logical components
+- 🛠️ Build efficient and maintainable solutions
 - 🔁 Test, debug, and optimize performance
 
 ---
 
 📂 Featured Projects
 
-«(Actively building and improving real-world projects)»
+«(Continuously building real-world engineering experience)»
 
 - 🔹 C++ Algorithm Practice Suite
-  Collection of optimized problem-solving implementations
+  Structured implementations of problem-solving techniques
 
 - 🔹 Electronics Diagnostic Logic Simulator (Planned)
-  Logic-based system for simulating fault detection processes
+  Simulates fault detection and system behavior using logic design
 
 - 🔹 Data Structure Implementations
-  Clean and efficient implementations of core structures
+  Clean and optimized implementations of core data structures
 
 ---
 
 📈 Current Focus
 
 - 📚 Advanced Data Structures & Algorithms
-- 🧪 Building performance-focused C++ applications
-- ⚙️ Exploring low-level and system programming
+- 🧪 Performance-focused C++ development
+- ⚙️ Low-level/system programming concepts
 - 🏁 Competitive programming practice
 
 ---
 
 🎯 Future Goals
 
-- Become a high-level software engineer
-- Build system-level and performance-critical applications
-- Work on embedded systems and hardware-software integration
+- Become a strong software engineer
+- Build system-level and embedded applications
+- Work on hardware + software integration
 - Contribute to impactful engineering solutions
 
 ---
 
 📊 GitHub Stats
 
-"Abdi Yahya Bashir's GitHub stats" (https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true)
+"Abdi Yahya Bashir's GitHub stats" (https://github-readme-stats.vercel.app/api?username=abdiyahya857-jpg&show_icons=true)
 
 ---
 
 📫 Connect With Me
 
-- GitHub: https://github.com/YOUR_USERNAME
+- GitHub: "Abdi Yahya Bashir" (https://github.com/abdiyahya857-jpg)
 
 ---
 
-⭐ “Consistency, discipline, and deep understanding create real engineers.”
+⭐ “Consistency, discipline, and deep understanding build real engineers.”
