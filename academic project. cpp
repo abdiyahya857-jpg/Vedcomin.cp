@@ -1,58 +1,3 @@
-ADAMA SCIENCE AND TECHNOLOGY UNIVERSITY
-                                                                   (ASTU)
-
-
-
-
-
-
-
-SCHOOL OF  ELECTRICAL AND COMPUTING  ENGINEERING
-
-
-FUNDAMENTAL OF PROGRAMMIN GGROUP ASSIGNMENT
-                                           PROJECT1
-
-
-
-INSTRUCTUR NAME:         MS.TARIKU  DEBELA  WAKO
-YEAR OF PROJECT:           2026, FRIS YEAR,SECOD SEMESTER
-DEDLINE OF SUM:           MAY 4,MONDAY,2026
-
-
-
-
- THE NAME,ID AND SETION OF OUR GROUP MEMBERS!
-
-
-NAME OF STUDENT       ID            SECTION
-
-
-1. Abidi yahya    bashir    UGR/38746/18   42                                               
-2. Yordanos Elias Demise    UGR/40829/18   42                                                  
-3. Dak       Tot     Dak    UGR/39219/18   42                                                           
-4. Abenezer mokonnen        UGR/38825/18.  42                                                  
-5.Motuma Gudete Ejata       UGR/40226/18   42                                            
-
-
-
-
-
-WELCOME TO OUR AMAZING PROJECT OF PROGRAMMING!!!
-
-1.     Write a menu-based 
-         C++ program that performs
-         addition, subtraction
-          multiplication, and division
-         of two integers input from the user
-         and exits when user enters Q or q.
-         (use function for each operation.
-         It is preferable if 
-         you use switch case statement)
-
-
->solution:
-
 #include <iostream>
 using namespace std;
 
@@ -96,20 +41,6 @@ int main() {
 }
 
 
-
-
-.  Write a C++ program that accepts marks
-      of at least five students, determines the
-      corresponding letter grade and displays
-      the grade. A valid mark is 0-100,
-      so your program should be able to flag
-      invalid input (be able to
-      validate input). Use loop with sentinel.
-
-
->SOLUTION:
-
-
 #include <iostream>
 using namespace std;
 
@@ -119,12 +50,13 @@ int main() {
     while (true) {
         cout << "Enter mark (-1 to stop): ";
         cin >> mark;
+
         if(cin.fail()){
             cout<<"Invalid input! enter the valid N.\n";
             cin.clear();
             cin.ignore(1000,'\n');
-            continue;}
-
+            continue;
+        }
 
         if (mark == -1) break;
 
@@ -146,27 +78,6 @@ int main() {
 }
 
 
-/*3.   Write a C++ program that computes the product
-     of two 2D integer arrays A and B and stores the
-     result in third array C. (Hint: two 2D arrays
-     can be multiplied only if column of  A ==row
-     of B, so first you need to test this condition)
-     You program should do the following:
-     •Accept  rows and columns of A and B from the keyboard
-     •Accept  arrays A and B from the keyboard
-     •Test for condition
-     •If the condition is true, continue
-     to multiply the matrices otherwise
-     •Display a message that tells that
-     the multiplication is impossible and prompt
-     the user again  to input
-     the correct rows and columns
-
-
->SOLUTION:*/
-
-
-
 #include <iostream>
 using namespace std;
 
@@ -175,16 +86,13 @@ int main() {
 
     do {
         cout << "Enter rows & cols of array A: ";
-        cout<<endl;
         cin >> r1 >> c1;
-        cout<<endl;
+
         cout << "Enter rows & cols of array B: ";
         cin >> r2 >> c2;
-        cout<<endl;
 
         if (c1 != r2)
             cout << "Mult of non-square mat is invalid Try again.\n";
-            cout<<endl;
 
     } while (c1 != r2);
 
@@ -208,79 +116,47 @@ int main() {
         }
     }
 
-    cout << "Your new  Matrix formed is:\n";
+    cout << "Your new Matrix formed is:\n";
     for(int i=0;i<r1;i++) {
         for(int j=0;j<c2;j++)
             cout << C[i][j] << " ";
         cout << endl;
     }
-cout<<"your new array also square matrix you are right!!!";
+
     return 0;
 }
 
-
-
-
-/*4.  Write a C++ program that accepts integer array
-      (positive or negative) of size of your choice
-      from the user(you can input size from the keyboard),
-      computes the sum of positive and negative elements
-      of the array separately and displays the results using
-      only a pointer to the array.(for input  and
-
-
-                                                                                                                                                                                                                                                                                            out, your program uses the pointer, not the array name)
->SOLUTION:*/
 
 #include <iostream>
 using namespace std;
 
 int main() {
-    int  size;
-    cout<<"Enter the size of your arr!"<<endl;
-    cin>>size;
+    int size;
+    cout << "Enter size of your arr!" << endl;
+    cin >> size;
+
     int arr[size];
-    int *ptr=arr;
-    cout<<"Enter all elements of your array!!"<<endl;
-    int sum1=0;
-    int sum2=0;
-    for(int i=0;i<size; i++){
-        cin>>*(ptr+i);
-        if(*(ptr+i)>0){
-            sum1+=*(ptr+i);}
-        else if(*(ptr+i)<0){
-            sum2+=*(ptr+i);}}
-  cout<<endl;
-  cout<<"The sum of positive integers are="<<sum1<<endl;
-  cout<<"The sum of negative  integers are="<<sum2<<endl;
-  cout<<"Your program is successfully performed congratulations!!!"<<endl;
+    int *ptr = arr;
 
-      return 0;}
+    int sum1 = 0;
+    int sum2 = 0;
 
+    cout << "Enter all elements of your array!!" << endl;
 
+    for(int i=0;i<size;i++){
+        cin >> *(ptr+i);
 
+        if(*(ptr+i) > 0)
+            sum1 += *(ptr+i);
+        else if(*(ptr+i) < 0)
+            sum2 += *(ptr+i);
+    }
 
+    cout << "The sum of positive integers are=" << sum1 << endl;
+    cout << "The sum of negative integers are=" << sum2 << endl;
 
- /*5.          Write a program that prompts
-      the user to enter size of an 
-      array of real numbers (of
-      double type), populates the 
-      array by accepting the elements
-      from the user, determines the
-      second largest element of the
-      array and displays that largest element.
-
-      The program must 
-      check for two conditions:
-          Array size bust be at least 2
-          If all array elements are
-      the same, no second largest element
-
-
-
-
-
- >>>SOLUTION!*/
+    return 0;
+}
 
 
 #include <iostream>
@@ -297,45 +173,30 @@ int main() {
     }
 
     double arr[n];
-    cout << "Enter elements:\n";
+
     for (int i = 0; i < n; i++)
         cin >> arr[i];
 
     double max = arr[0];
+
     for (int i = 1; i < n; i++)
         if (arr[i] > max)
             max = arr[i];
 
     double second = arr[0];
+
     for (int i = 0; i < n; i++) {
         if (arr[i] < max && (second == max || arr[i] > second))
             second = arr[i];
     }
 
     if (second == max)
-        cout << "No second largest (all equal)";
+        cout << "No second largest";
     else
         cout << "Second largest: " << second;
 
-    return 0;}
-
-
-/*6.        Write a program that creates
-        a text file named
-        practice.txt’ and 
-        performs the following
-        operations:
-        a.Writes some content
-        into it by accepting it from the user
-        Sample input:
-        Welcome to programming world
-        C++ is a powerful programming language
-        C++ is supports object-oriented programming
-        b.Displays the content of the file
-
-
-
->>>>>>SOLUTION!*/
+    return 0;
+}
 
 
 #include <iostream>
@@ -345,42 +206,19 @@ using namespace std;
 int main() {
     ofstream out("practice.txt", ios::app);
 
-    if(!out) {
-        cout << "Error writing!";
-        return 0;
-    }
-
     out << "C++ is general purpose programming language\n";
     out << "C++ is dynamically typed programming language\n";
 
     out.close();
 
     ifstream in("practice.txt");
-    if(!in) {
-        cout << "Error reading!";
-        return 0;
-    }
 
     string line;
     while(getline(in,line))
         cout << line << endl;
 
     in.close();
-}   
-
-
-
-
-/*7.   Write a program that modifies the
-       file in Q#6 by adding a new content.
-           Sample new content
-           C++ is general purpose programming language
-           C++ is dynamically typed programming language
-      (Your code should handle
-       errors while writing and reading)
-
-
->>>>SOLUTION!*/
+}
 
 
 #include <iostream>
@@ -390,88 +228,51 @@ using namespace std;
 int main() {
     ofstream file("practice.txt", ios::app);
 
-    if(!file) {
-        cout << "Error opening file!";
-        return 0;
-    }
-
     file << "C++ is general purpose programming language\n";
     file << "C++ is dynamically typed programming language\n";
 
     file.close();
 
     ifstream read("practice.txt");
-    if(!read) {
-        cout << "Error reading file!";
-        return 0;
-    }
 
     string line;
-    while(getline(read, line))
+    while(getline(read,line))
         cout << line << endl;
 
     read.close();
+
     return 0;
 }
 
 
-
-
-/*8. Write a program that creates a structure
-     named Student with members SID, Fname,
-     Lname and mark(0-100) and
-     stores student’s information
-     (id, first name, last name, and mark) of
-     at least five students , determines
-     the maximum mark and displays
-     it (hint: use array of structures)
-
->>>>>SOLUTION!*/     
-
-
 #include<iostream>
 using namespace std;
+
 struct stud_info{
-int mark;
-string fname,lname,ID;};
+    int mark;
+    string fname,lname,ID;
+};
+
 int main(){
     stud_info arr[3];
     stud_info *ptr = arr;
-cout<<"#------The whole information of ----:"<<endl;
+
     for(int i=0;i<3;i++){
-            cout<<"Name:";
-            getline(cin>>ws,ptr[i].fname);
-            cout<<"enter last name"<<endl;
-            getline(cin>>ws,ptr[i].lname);
-            cout<<"enter the mark of student!"<<endl;
-            cin>>ptr[i].mark;
-            cout<<endl;
-            cout<<"enter the ID of student!"<<endl;
-            getline(cin>>ws,ptr[i].ID);
-            cout<<endl;
+        getline(cin>>ws,ptr[i].fname);
+        getline(cin>>ws,ptr[i].lname);
+        cin >> ptr[i].mark;
+        getline(cin>>ws,ptr[i].ID);
+    }
 
-                    }
-int max =ptr[0].mark;
+    int max = ptr[0].mark;
 
+    for(int i=0;i<3;i++){
+        if(max < ptr[i].mark)
+            max = ptr[i].mark;
+    }
 
-for(int i=0;i<3;i++){
-        if(max<ptr[i].mark){
-            max=ptr[i].mark;}
+    cout << "Max mark = " << max << endl;
 }
-cout<<"The max element="<<max<<endl;}
-
-
-
-
-
-/*9.           Write a program that computes
-       the product of every airs of
-       elements of an integer array
-       of size n input from the user.
-
-
-
->>>>>SOLUTION!*/
 
 
 #include <iostream>
@@ -479,463 +280,19 @@ using namespace std;
 
 int main() {
     int n;
-    cout << "Enter size: ";
     cin >> n;
 
     int arr[n];
+
     for(int i=0;i<n;i++)
         cin >> arr[i];
 
-   cout <<"Pair products:"<<endl<<endl;
-
-    for(int i=0;i<n;i++) {
-        for(int j=i+1;j<n;j++) {
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
             cout << arr[i] * arr[j] << " ";
         }
-        cout << endl;}
-
-return 0;}
-
-
-
-
-/*10.
-         ##.OUTPUTS
-
-          :10
-          100
-          50
-         The value is:100
-
-
-
-
-11.
-          OUTPUT
-          01
-          01
-          01
-          01
-          01
-          01
-
-
-
-
-
-
-
-
-
-
- =======GENERAL EXPLANATION FOR OUR PROBLES=======
-
-
-
-
-
-
-=========== Q1: MENU-BASED CALCULATOR =============
-
-
-1.SEQUENCE:
-- Start program
-- Define functions (add, sub, mul, div)
-- Enter main()
-- Start do-while loop
-- Display menu
-- Take user choice
-- If choice == Q/q → exit loop
-- Input two numbers
-- Use switch to select operation
-- Call corresponding function
-- Display result
-- Repeat loop
-
-
-
-
-
-2. ALGORITHM LOGIC:
-- Program is user-driven (event-based)
-- Each operation is separated using functions
-- Switch handles multiple choices efficiently
-- Division includes safety check (no division by zero)
-
-3. LOOP CONTROL:
-- Type: do-while
-- Runs at least once
-- Controlled by user input (choice)
-- Exit using break when Q/q entered
-
-
-
-
-===========Q2: STUDENT GRADE SYSTEM===============
-
-
-
-1. SEQUENCE:
-- Start program
-- Begin infinite loop
-- Input mark
-- If mark == -1 → exit loop
-- Validate input (0–100)
-- If invalid → show error and continue
-- If valid → assign grade
-- Display grade
-- Repeat
-
-2. ALGORITHM LOGIC:
-- Sentinel value (-1) stops input
-- Input validation prevents wrong results
-- Uses range classification (if-else ladder)
-
-3. LOOP CONTROL:
-- Type: while(true)
-- Controlled by sentinel (-1)
-- continue skips invalid input
-- break exits loop
-
-
-
-
-
- Q3: MATRIX MULTIPLICATION 
-
-
-
-
-1. SEQUENCE:
-
-
-
-- Input rows and columns of matrices
-- Check condition (c1 == r2)
-- If invalid → repeat input
-- Input matrix A and B
-- Perform multiplication
-- Store result in matrix C
-- Display result
-
-
-2. ALGORITHM LOGIC:
-
-
-- Matrix multiplication uses dot product
-- Each element:
-  C[i][j] = sum of A row * B column
-- Uses triple nested loops
-
-
-
-
-3. LOOP CONTROL:
-
-
-
-- do-while for validation
-- Nested loops:
-  i → rows
-  j → columns
-  k → multiplication
-- Time complexity: O(n^3)
-
-
- Q4: POINTER ARRAY SUM
-
-
-1. SEQUENCE:
-
-
-- Input size
-- Declare array
-- Assign pointer to array
-- Input elements using pointer
-- Traverse using pointer
-- Separate positive and negative sums
-- Display results
-
-
-
-2. ALGORITHM LOGIC:
-
-
-- Pointer stores base address
-- Access elements using *(p+i)
-- Classify numbers based on condition
-
-
-
-3. LOOP CONTROL:
-
-
-- Type: for loop
-- Controlled by index i
-- Sequential memory traversal
-
-
-
-
- Q5: SECOND LARGEST ELEMENT
-
-
-
-
-
-1. SEQUENCE:
-
-- Input size
-- Check if size >= 2
-- Input elements
-- Initialize max and second
-- Traverse array
-- Update values
-- Display second largest
-
-
-
-2. ALGORITHM LOGIC:
-
-- Track two values: max and second
-- If new max found → shift values
-- If value between → update second
-- Handles duplicates
-
-
-
-3. LOOP CONTROL:
-
-- Type: for loop
-- Single traversal
-- Efficient (O(n))
-
-
-
-
-
-
-Q6: FILE WRITE AND READ
-
-
-
-1. SEQUENCE:
-
-- Open file in write mode
-- Input text from user
-- Stop when '#' entered
-- Close file
-- Open file in read mode
-- Read and display content
-
-
-
-2. ALGORITHM LOGIC:
-
-
-- Uses file streams (ofstream, ifstream)
-- Sentinel controls input
-- File stores persistent data
-
-
-
-3. LOOP CONTROL:
-
-
-- Input loop → sentinel-based
-- Read loop → EOF controlled
-
-
-
- Q7: FILE APPEND 
-
-
-
-1. SEQUENCE:
-
-
-- Open file in append mode
-- Check for errors
-- Add new content
-- Close file
-- Reopen file for reading
-- Display content
-
-
-2. ALGORITHM LOGIC:
-
-
-- ios::app prevents overwriting
-- Error handling ensures safety
-
-
-
-3. LOOP CONTROL:
-
-
-- File reading loop runs until EOF
-
-
- Q8: STRUCTURE AND MAX MARK
-
-
-
-1. SEQUENCE:
-
-
-- Define structure
-- Declare array of structures
-- Input student data
-- Initialize max
-- Compare marks
-- Display max
-
-
-2. ALGORITHM LOGIC:
-
-
-- Structure groups related data
-- Array stores multiple records
-- Simple comparison finds maximum
-
-
-
-3. LOOP CONTROL:
-
-
-- First loop → input
-- Second loop → comparison
-
-
-
-
-Q9: PRODUCT OF ALL PAIRS
-
-
-
-1. SEQUENCE:
-
-
-- Input size
-- Input array
-- Select each element
-- Multiply with remaining elements
-- Display results
-
-2. ALGORITHM LOGIC:
-
-
-- Uses pairing logic
-- Avoids duplicate pairs (i < j)
-[4/30/2026 11:54 AM] Abdi Yahya: 3. LOOP CONTROL:
-- Nested for loops
-- Outer loop → base element
-- Inner loop → pairing
-
-
-
-
- Q10: VARIABLE SCOPE 
-
-
-
-1. SEQUENCE:
-
-
-- Start main()
-- Print local variable
-- Print global variable
-- Call function
-- Inside function:
-  print local
-  print global
-
-
-
-2. ALGORITHM LOGIC:
-
-
-- Demonstrates scope resolution (::)
-- Local variable overrides global
-- :: accesses global variable
-
-
-
-
-3. LOOP CONTROL:
-
-- No loop used
-- Sequential execution
-
-
-Q11: NESTED LOOP WITH BREAK
-
-
-1. SEQUENCE:
-
-
-- Outer loop runs 6 times
-- Inner loop starts
-- If j == 2 → break
-- Print values before break
-- Move to next line
-- Repeat
-
-
-
-2. ALGORITHM LOGIC:
-
-
-- break stops inner loop only
-- Outer loop continues
-- Produces repeated pattern
-
-
-
-3. LOOP CONTROL:
-
-
-- Nested for loops
-- Inner loop controlled by break
-- Outer loop runs fully
-
-
-
-
-
-
-
-FINAL GENERAL STRUCTURE
-
-
-
-ALL PROGRAMS FOLLOW:
-
-
-1. INPUT → user data collection
-2. PROCESS → logic, conditions, loops
-3. OUTPUT → display result
-
-
-
-LOOP TYPES USED:
-
-
-- do-while → menu systems
-- while(true) → sentinel loops
-- for loop → counting and arrays
-- nested loops → matrices and pairs
-
-CONTROL METHODS:
-- break → exit loop
-- continue → skip iteration
-- sentinel value → stop input
-
-
-
-
-     THE END OF MY PROJECT 
-        GOOD BYE TAKER
-
-
-               */
+        cout << endl;
+    }
+
+    return 0;
+}
