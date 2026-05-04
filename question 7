@@ -1,0 +1,41 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main() {
+    // Open file in append mode
+    ofstream outfile("practice.txt", ios::app);
+
+    if (!outfile) {
+        cout << "Error opening file for writing!" << endl;
+        return 1;
+    }
+
+    cout << "Adding new content to the file...\n";
+
+    // New content
+    outfile << "C++ is general purpose programming language" << endl;
+    outfile << "C++ is dynamically typed programming language" << endl;
+
+    outfile.close();
+
+    // Open file for reading
+    ifstream infile("practice.txt");
+
+    if (!infile) {
+        cout << "Error opening file for reading!" << endl;
+        return 1;
+    }
+
+    cout << "\nUpdated content of practice.txt:\n";
+
+    string line;
+    while (getline(infile, line)) {
+        cout << line << endl;
+    }
+
+    infile.close();
+
+    return 0;
+}
