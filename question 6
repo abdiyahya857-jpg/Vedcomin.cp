@@ -1,0 +1,48 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main() {
+    ofstream outfile;
+    outfile.open("practice.txt");
+
+    if (!outfile) {
+        cout << "Error creating file!" << endl;
+        return 1;
+    }
+
+    cout << "Enter lines of text (type 'END' to stop):" << endl;
+
+    string line;
+
+    // Writing to file
+    while (true) {
+        getline(cin, line);
+        if (line == "END") {
+            break;
+        }
+        outfile << line << endl;
+    }
+
+    outfile.close();
+
+    // Reading from file
+    ifstream infile;
+    infile.open("practice.txt");
+
+    if (!infile) {
+        cout << "Error opening file!" << endl;
+        return 1;
+    }
+
+    cout << "\nContent of practice.txt:\n";
+
+    while (getline(infile, line)) {
+        cout << line << endl;
+    }
+
+    infile.close();
+
+    return 0;
+}
